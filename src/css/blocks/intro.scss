@@ -1,0 +1,18 @@
+.intro__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.intro__right {
+    padding-top: 80px;
+    flex-basis: 50%;
+}
+.intro__left {
+    flex-basis: 50%;
+}
+.intro__img {
+    height: 100%;
+    width: 100%;
+    object-fit: 100%;
+}

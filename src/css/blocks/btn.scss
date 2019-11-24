@@ -1,0 +1,17 @@
+.btn {
+    display: inline-block;
+    padding: 13px 15px;
+    background-color: #e45028;
+    border-radius: 4px;
+    font-family: Ubuntu;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.btn__link {
+    color: #fff;
+}
+.btn--color-black {
+    background-color: #2f3234; 
+    color: #fff;
+}
