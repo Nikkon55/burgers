@@ -9,14 +9,17 @@
 }
 .fixed-menu__dot {
     display: block;
-    height: 15px;
-    width: 15px;
+    height: 16px;
+    width: 16px;
     border-radius: 50%;
     border: 1px solid transparent;
     margin-bottom: 3px;
     position: relative;
 
     &--active {
+        border-color: white;
+    }
+    &:hover {
         border-color: white;
     }
     
