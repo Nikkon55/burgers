@@ -19,7 +19,8 @@
   font-family: Ubuntu;
   font-size: 13px;
   font-weight: 500;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-right: 15px; }
 
 .nav__item {
   display: -webkit-box;
@@ -37,6 +38,8 @@
     border-radius: 50%;
     background-color: #fff;
     margin-left: 15px; }
+  .nav__item:last-child {
+    margin-right: 0; }
 
 .nav__item:last-child:after {
   display: none; }

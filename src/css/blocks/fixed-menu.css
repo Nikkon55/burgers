@@ -6,13 +6,15 @@
 
 .fixed-menu__dot {
   display: block;
-  height: 15px;
-  width: 15px;
+  height: 16px;
+  width: 16px;
   border-radius: 50%;
   border: 1px solid transparent;
   margin-bottom: 3px;
   position: relative; }
   .fixed-menu__dot--active {
+    border-color: white; }
+  .fixed-menu__dot:hover {
     border-color: white; }
   .fixed-menu__dot::before {
     content: "";

@@ -1,4 +1,7 @@
 .tagline__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: #ffffff;
   font-family: Lifehack;
   font-size: 65px;
