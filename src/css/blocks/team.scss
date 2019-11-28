@@ -6,3 +6,63 @@
     background-size: cover;
     position: relative;
 }
+
+.team__wrapper {
+    position: absolute;
+    right: 0;
+    background-image: url(../img/team/overlay.png);
+    height: 100%;
+    width: 50%;
+}
+.team__content {
+    position: absolute;
+   width: 70%;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+    
+}
+.team-accordion__item {
+    margin-bottom: 20px;
+}
+.team__headline {
+    color: #f9b43b;
+    margin-bottom: 46px;
+}
+.team-accordion__details {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: 0;
+    &--active {
+        height: 100%;;
+    }
+}
+
+.team-accordion__photo {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.team-accordion__desc {
+    color: #ffffff;
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 2em;
+}
+.team-accordion__link {
+    display: block;
+    color: #ffffff;
+    font-family: Gagalin;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 17px;
+    &--active {
+        color: #f9b43b
+    }
+}
+
