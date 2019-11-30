@@ -24,6 +24,8 @@
 }
 .team-accordion__item {
     margin-bottom: rem(20px);
+
+    
 }
 .team__headline {
     color: #f9b43b;
@@ -61,8 +63,17 @@
     font-size: rem(14px);
     font-weight: 400;
     margin-bottom: rem(14px);
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border: rem(7px) solid transparent;
+        border-top-color: #f9b43b;
+        border-bottom: 0;
+    }
     &--active {
         color: #f9b43b
     }
+
 }
 

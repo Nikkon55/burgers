@@ -776,7 +776,39 @@ button {
   font-size: 0.875rem;
   font-weight: 400;
   margin-bottom: 0.875rem; }
+  .team-accordion__link:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 0.4375rem solid transparent;
+    border-top-color: #f9b43b;
+    border-bottom: 0; }
   .team-accordion__link--active {
     color: #f9b43b; }
+
+.menu {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/menu/menubg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+.menu-accordion__item {
+  width: 5%;
+  height: 100vh;
+  background-image: url(../img/menu/menu1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+.menu-accordion__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
 
 /*# sourceMappingURL=main.css.map */
