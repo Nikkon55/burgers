@@ -3,18 +3,23 @@
     height: 100%;
     background-image: url(../img/menu/menubg.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     position: relative;
 }
 .menu-accordion__item {
     width: 5%;
-    height: 100vh;
+    height: 100%;
     background-image: url(../img/menu/menu1.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
 }
+
 .menu-accordion__list {
     display: flex;
     flex-direction: row;
+}
+.menu-accordion {
+    position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
 }

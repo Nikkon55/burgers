@@ -550,6 +550,9 @@ button {
   text-align: center;
   margin-bottom: 3.4375rem; }
 
+.headline--menu {
+  color: #fff; }
+
 .tagline__text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -791,16 +794,14 @@ button {
   height: 100%;
   background-image: url(../img/menu/menubg.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   position: relative; }
 
 .menu-accordion__item {
   width: 5%;
-  height: 100vh;
+  height: 100%;
   background-image: url(../img/menu/menu1.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative; }
+  background-repeat: no-repeat; }
 
 .menu-accordion__list {
   display: -webkit-box;
@@ -810,5 +811,96 @@ button {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row; }
+
+.menu-accordion {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0; }
+
+.map {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/map.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  background-image: url(../img/bg/footer-bg.png);
+  width: 100%;
+  min-height: 3.75rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem; }
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.footer__address {
+  color: #ffffff;
+  font-family: Ubuntu;
+  font-size: 0.875rem;
+  font-weight: 300;
+  margin-bottom: 0.3125rem; }
+
+.footer__phone {
+  color: #e45028;
+  font-family: Ubuntu;
+  font-weight: 700; }
+
+.footer__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.vk-icon, .fb-icon, .twitter-icon, .inst-icon {
+  width: 1.25rem;
+  height: 1.25rem; }
+
+.social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.social__item {
+  margin-right: 1.25rem;
+  position: relative; }
+  .social__item:last-child {
+    margin-right: 0px; }
+  .social__item:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.4; }
+  .social__item:hover:after {
+    opacity: 0; }
+
+.phone-icon {
+  width: 0.75rem;
+  height: 0.75rem; }
 
 /*# sourceMappingURL=main.css.map */
