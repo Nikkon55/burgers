@@ -1,10 +1,10 @@
 
 .scroll__icon {
     position: absolute;
-    bottom: 50px;
-    background-image: url(../../img/arrow-scroll.png);
-    width: 29px;
-    height: 14px;
+    bottom: rem(50px);
+    background-image: url(../img/arrow-scroll.png);
+    width: rem(29px);
+    height: rem(14px);
     display: block;
     left: 50%;
     transform: translateX(-50%);

@@ -27,19 +27,19 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0, 0.3);
-    padding: 50px 20px;
+    padding: 5% 4%;
     transition: opacity 0.4s;
 }
 .reviews__name {
     font-family: Gagalin;
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: 400;
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
 }
 .reviews__text {
     font-family: Ubuntu;
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: 300;
     line-height: 2em;
-    margin-bottom: 17px;
+    margin-bottom: rem(17px);
 }
