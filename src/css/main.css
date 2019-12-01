@@ -623,6 +623,9 @@ button {
   @media screen and (max-width: 768px) {
     .tagline__text {
       text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .tagline__text {
+      font-size: 3.125rem; } }
 
 .tagline__headline {
   color: #f9b43b;
@@ -630,6 +633,9 @@ button {
   @media screen and (max-width: 768px) {
     .tagline__headline {
       text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .tagline__headline {
+      font-size: 3.9375rem; } }
 
 .scroll__icon {
   position: absolute;
@@ -696,6 +702,12 @@ button {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+  @media screen and (max-width: 480px) {
+    .about-us__benefits {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .about-us__item {
   display: -webkit-box;
@@ -711,10 +723,21 @@ button {
   -ms-flex-preferred-size: 33.3%;
   flex-basis: 33.3%;
   padding: 0 2%; }
+  @media screen and (max-width: 480px) {
+    .about-us__item {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; } }
 
 .about-us__img {
   height: 5.5625rem;
   margin-bottom: 2.0625rem; }
+  @media screen and (max-width: 480px) {
+    .about-us__img {
+      height: 5.5625rem;
+      width: 6.0625rem;
+      margin-bottom: 0; } }
 
 .about-us__title {
   color: #2f3234;

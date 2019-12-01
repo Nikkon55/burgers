@@ -10,6 +10,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @include phones{
+        flex-direction: column;
+    }
 }
 .about-us__item {
     display: flex;
@@ -17,10 +20,18 @@
     align-items: center;
     flex-basis: 33.3%;
     padding: 0 2%;
+    @include phones{
+        flex-direction: row;
+    }
 }
 .about-us__img {
     height: rem(89px);
     margin-bottom: rem(33px);
+    @include phones {
+        height: rem(89px);
+        width: rem(97px);
+        margin-bottom: 0;
+    }
 }
 
 .about-us__title {

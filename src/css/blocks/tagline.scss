@@ -7,11 +7,17 @@
     @include tablets {
         text-align: center;
     }
+    @include phones {
+        font-size: rem(50px);
+    }
 }
 .tagline__headline {
     color: #f9b43b;
     margin-bottom: rem(30px);
     @include tablets {
         text-align: center;
+    }
+    @include phones {
+        font-size: rem(63px);
     }
 }
