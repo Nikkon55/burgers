@@ -4,9 +4,14 @@
     font-family: Lifehack;
     font-size: rem(65px);
     font-weight: 500;
-    
+    @include tablets {
+        text-align: center;
+    }
 }
 .tagline__headline {
     color: #f9b43b;
     margin-bottom: rem(30px);
+    @include tablets {
+        text-align: center;
+    }
 }

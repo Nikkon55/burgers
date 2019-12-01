@@ -24,13 +24,20 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    @include tablets {
+        flex-direction: column;
+    }
 }
 .intro__right {
     padding-top: 15%;
-    flex-basis: 50%;
+    width: 50%;
+    @include tablets {
+        padding: 0 16%;
+        width: 100%;
+    }
 }
 .intro__left {
-    flex-basis: 50%;
+    width: 50%;
 }
 .intro__img {
     height: 100%;

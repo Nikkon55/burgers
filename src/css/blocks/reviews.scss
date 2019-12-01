@@ -4,7 +4,7 @@
     flex-wrap: wrap;
 }
 .reviews__item {
-    flex-basis: 25%;
+    width: 25%;
     height: 50%;
     position: relative;
     &:hover {
@@ -12,6 +12,15 @@
         opacity: 1;
         }
     }
+    @include tablets {
+    width: 50%;
+    height: 25%;
+    &:active{
+        .reviews__hover {
+            opacity: 1;
+        }
+    }
+}
 }
 .reviews__img {
     width: 100%;
@@ -29,12 +38,21 @@
     background-color: rgba(0,0,0, 0.3);
     padding: 5% 4%;
     transition: opacity 0.4s;
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        padding: 5% 10%;
+        align-items: center;
+    }
 }
 .reviews__name {
     font-family: Gagalin;
     font-size: rem(14px);
     font-weight: 400;
     margin-bottom: rem(30px);
+    @include tablets {
+        text-align: center;
+    }
 }
 .reviews__text {
     font-family: Ubuntu;
@@ -42,4 +60,7 @@
     font-weight: 300;
     line-height: 2em;
     margin-bottom: rem(17px);
+    @include tablets {
+        text-align: center;
+    }
 }

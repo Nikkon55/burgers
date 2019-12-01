@@ -15,12 +15,24 @@
 .order-form__elem {
     display: flex;
     flex-direction: row;
+    @include tablets {
+        flex-direction: column;
+        padding: 0 20%;
+    }
 }
 .order-form__col {
     width: 45%;
     margin-right: 5%;
     &:last-child {
         margin-right: 0;
+    }
+    @include tablets {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: rem(20px);
+        &:last-child{
+            margin-bottom: 0;
+        }
     }
 }
 .order-form__row {
