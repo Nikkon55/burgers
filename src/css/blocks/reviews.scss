@@ -44,6 +44,12 @@
         padding: 5% 10%;
         align-items: center;
     }
+    @include phones {
+        display: flex;
+        flex-direction: column;
+        padding: 25% 10%;
+        align-items: center;
+    }
 }
 .reviews__name {
     font-family: Gagalin;
@@ -52,6 +58,10 @@
     margin-bottom: rem(30px);
     @include tablets {
         text-align: center;
+    }
+    @include phones {
+        text-align: center;
+        font-size: rem(24px);
     }
 }
 .reviews__text {
@@ -62,5 +72,8 @@
     margin-bottom: rem(17px);
     @include tablets {
         text-align: center;
+    }
+    @include phones {
+        display: none;
     }
 }

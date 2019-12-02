@@ -600,6 +600,10 @@ button {
 .headline--about-us {
   text-align: center;
   margin-bottom: 3.4375rem; }
+  @media screen and (max-width: 480px) {
+    .headline--about-us {
+      margin-bottom: 2.5rem;
+      font-size: 3.125rem; } }
 
 .headline--menu {
   color: #fff;
@@ -625,7 +629,7 @@ button {
       text-align: center; } }
   @media screen and (max-width: 480px) {
     .tagline__text {
-      font-size: 3.125rem; } }
+      font-size: 2.8125rem; } }
 
 .tagline__headline {
   color: #f9b43b;
@@ -658,6 +662,12 @@ button {
   top: 100px;
   right: 60px;
   z-index: 2; }
+  @media screen and (max-width: 768px) {
+    .fixed-menu {
+      display: none; } }
+  @media screen and (max-width: 480px) {
+    .fixed-menu {
+      display: none; } }
 
 .fixed-menu__dot {
   display: block;
@@ -728,16 +738,23 @@ button {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
-      flex-direction: row; } }
+      flex-direction: row;
+      margin-bottom: 2.5rem; } }
 
 .about-us__img {
   height: 5.5625rem;
   margin-bottom: 2.0625rem; }
   @media screen and (max-width: 480px) {
     .about-us__img {
+      margin-bottom: 0;
+      margin-right: 1.25rem; } }
+
+.about-us__pic {
+  height: 5.5625rem; }
+  @media screen and (max-width: 480px) {
+    .about-us__pic {
       height: 5.5625rem;
-      width: 6.0625rem;
-      margin-bottom: 0; } }
+      width: 7.8125rem; } }
 
 .about-us__title {
   color: #2f3234;
@@ -746,6 +763,9 @@ button {
   font-weight: 500;
   text-align: center;
   margin-bottom: 0.8125rem; }
+  @media screen and (max-width: 480px) {
+    .about-us__title {
+      text-align: left; } }
 
 .about-us__text {
   color: #2f3234;
@@ -754,6 +774,13 @@ button {
   font-weight: 300;
   line-height: 2em;
   text-align: center; }
+  @media screen and (max-width: 480px) {
+    .about-us__text {
+      text-align: left; } }
+
+@media screen and (max-width: 480px) {
+  .about-us__desc {
+    text-align: left; } }
 
 .reviews__list {
   height: 100%;
@@ -808,6 +835,19 @@ button {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; } }
+  @media screen and (max-width: 480px) {
+    .reviews__hover {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 25% 10%;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .reviews__name {
   font-family: Gagalin;
@@ -817,6 +857,10 @@ button {
   @media screen and (max-width: 768px) {
     .reviews__name {
       text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .reviews__name {
+      text-align: center;
+      font-size: 1.5rem; } }
 
 .reviews__text {
   font-family: Ubuntu;
@@ -827,6 +871,9 @@ button {
   @media screen and (max-width: 768px) {
     .reviews__text {
       text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .reviews__text {
+      display: none; } }
 
 .team {
   width: 100%;
@@ -1006,6 +1053,7 @@ button {
   width: 0;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 4% 2%;
+  width: 0;
   display: none; }
 
 .menu-accordion__title {
@@ -1033,6 +1081,9 @@ button {
   background-image: url(../img/menu/menu1.png);
   background-repeat: no-repeat;
   background-size: cover; }
+  @media screen and (max-width: 480px) {
+    .menu-accordion__trigger {
+      width: 2.5rem; } }
 
 .menu-accordion__trigger--bg--veg {
   background-image: url(../img/menu/menu2.png);
@@ -1050,11 +1101,17 @@ button {
   font-size: 0.875rem;
   font-weight: 300;
   line-height: 1.5rem;
+  overflow: hidden;
   display: none; }
 
 .menu-accordion__item--active .menu-accordion__content {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 34.375rem; }
+  @media screen and (max-width: 480px) {
+    .menu-accordion__item--active .menu-accordion__content {
+      width: 15rem; } }
 
 .menu-accordion__item--active .menu-accordion__text {
   display: block; }
@@ -1091,6 +1148,13 @@ button {
       -ms-flex-direction: column;
       flex-direction: column;
       padding: 0 20%; } }
+  @media screen and (max-width: 480px) {
+    .order-form__elem {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 0 5%; } }
 
 .order-form__col {
   width: 45%;
@@ -1116,6 +1180,11 @@ button {
   margin-bottom: 1.25rem; }
   .order-form__row:last-child {
     margin-bottom: 0; }
+  @media screen and (max-width: 480px) {
+    .order-form__row {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .order-form__input {
   width: 100%;
@@ -1224,6 +1293,12 @@ button {
   padding: 0;
   background-color: transparent; }
 
+@media screen and (max-width: 480px) {
+  .order-form__row--four-blocks .order-form__block:last-child {
+    display: none; }
+  .order-form__row--four-blocks .order-form__block:nth-child(3) {
+    margin-right: 0; } }
+
 .map {
   width: 100%;
   height: 100%;
@@ -1254,6 +1329,15 @@ button {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row; }
+  @media screen and (max-width: 480px) {
+    .footer__container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .footer__address {
   color: #ffffff;
@@ -1274,6 +1358,20 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+
+@media screen and (max-width: 480px) {
+  .footer__left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 0.9375rem; } }
 
 .vk-icon, .fb-icon, .twitter-icon, .inst-icon {
   width: 1.25rem;

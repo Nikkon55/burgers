@@ -3,6 +3,12 @@
     top: 100px;
     right: 60px;
     z-index: 2;
+    @include tablets {
+        display: none;
+    }
+    @include phones {
+        display: none;
+    }
 }
 .fixed-menu__item {
 

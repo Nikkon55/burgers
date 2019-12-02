@@ -8,6 +8,10 @@
 .headline--about-us {
     text-align: center;
     margin-bottom: rem(55px);
+    @include phones {
+        margin-bottom: rem(40px);
+        font-size: rem(50px);
+    }
 }
 .headline--menu {
     color: #fff;

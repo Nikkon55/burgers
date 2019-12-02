@@ -28,6 +28,7 @@
     width: 0;
     background-color: rgba(0,0,0, 0.7);
     padding: 4% 2%;
+    width: 0;
     display: none;
 }
 
@@ -48,6 +49,9 @@
     background-image: url(../img/menu/menu1.png);
     background-repeat: no-repeat;
     background-size: cover;
+    @include phones {
+        width: rem(40px);
+    }
 }
 .menu-accordion__trigger--bg--veg{
     background-image: url(../img/menu/menu2.png);
@@ -65,12 +69,16 @@
     font-size: rem(14px);
     font-weight: 300;
     line-height: 1.5rem;
+    overflow: hidden;
     display: none;
 }
 
 .menu-accordion__item--active .menu-accordion__content {
-    display:block;
+    display: flex;
     width: rem(550px);
+    @include phones {
+        width: rem(240px); 
+    }
 
 }
 .menu-accordion__item--active .menu-accordion__text {
