@@ -4,6 +4,7 @@
     background-image: url(../img/bg/bg-about.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
 .about-us__benefits {
@@ -36,6 +37,7 @@
 }
 .about-us__pic {
     height: rem(89px);
+    max-width: 100%;
     @include phones {
         height: rem(89px);
         width: rem(125px);

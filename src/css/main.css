@@ -347,6 +347,9 @@ template {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+body {
+  font-family: Ubuntu; }
+
 html {
   font-size: 16px; }
   @media screen and (max-width: 768px) {
@@ -399,6 +402,9 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+  @media screen and (max-width: 480px) {
+    .section {
+      min-height: initial; } }
 
 button {
   border: none;
@@ -603,7 +609,8 @@ button {
   @media screen and (max-width: 480px) {
     .headline--about-us {
       margin-bottom: 2.5rem;
-      font-size: 3.125rem; } }
+      font-size: 3.125rem;
+      padding-top: 0.625rem; } }
 
 .headline--menu {
   color: #fff;
@@ -615,6 +622,9 @@ button {
   color: #f9b43b;
   text-align: center;
   margin-bottom: 2.75rem; }
+  @media screen and (max-width: 480px) {
+    .headline--order {
+      font-size: 2.5rem; } }
 
 .tagline__text {
   display: -webkit-box;
@@ -750,7 +760,8 @@ button {
       margin-right: 1.25rem; } }
 
 .about-us__pic {
-  height: 5.5625rem; }
+  height: 5.5625rem;
+  max-width: 100%; }
   @media screen and (max-width: 480px) {
     .about-us__pic {
       height: 5.5625rem;
@@ -807,7 +818,9 @@ button {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover; }
+  object-fit: cover;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
 
 .reviews__hover {
   opacity: 0;
@@ -1062,17 +1075,22 @@ button {
   font-weight: 400;
   color: #ffffff;
   white-space: nowrap;
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg); }
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  -webkit-writing-mode: tb-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: tb-rl;
+  padding-top: 30px;
+  overflow: hidden; }
 
 .menu-accordion__trigger {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1080,7 +1098,8 @@ button {
   height: 100%;
   background-image: url(../img/menu/menu1.png);
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
   @media screen and (max-width: 480px) {
     .menu-accordion__trigger {
       width: 2.5rem; } }
@@ -1288,6 +1307,7 @@ button {
     height: 0.5625rem; }
 
 .order-form__reset-btn {
+  font-family: Ubuntu;
   color: #ffffff;
   border: 0;
   padding: 0;

@@ -38,17 +38,21 @@
     font-weight: 400;
     color: #ffffff;
     white-space: nowrap;
-    transform: rotate(-90deg);
+    transform: rotate(-180deg);
+    writing-mode: tb-rl;
+    padding-top: 30px;
+    overflow: hidden;
 }
 .menu-accordion__trigger {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     width: rem(80px);
     height: 100%;
     background-image: url(../img/menu/menu1.png);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
     @include phones {
         width: rem(40px);
     }

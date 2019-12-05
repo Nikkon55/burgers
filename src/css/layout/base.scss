@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
 }
+body {
+    font-family: Ubuntu;
+}
 html {
     font-size: 16px;
     
@@ -56,6 +59,9 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include phones {
+        min-height: initial;
+    }
 }
 button {
     border: none;
