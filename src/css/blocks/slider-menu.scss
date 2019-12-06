@@ -1,0 +1,33 @@
+.slider-menu{
+    background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+    
+}
+.slider-menu__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 rem(10px);
+}
+.slider-menu__left {
+    width: 50%;
+}
+.slider-menu__right {
+    width: 50%;
+}
+.slider-menu__wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+}
+.scroll-left__icon{
+    min-width: rem(13px);
+    min-height: rem(29px);
+    max-width: 100%;
+
+}
+.scroll-right__icon{
+    min-width: rem(13px);
+    min-height: rem(29px);
+    max-width: 100%;
+}

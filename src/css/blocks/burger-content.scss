@@ -1,0 +1,23 @@
+.burger-content {
+    
+    max-width: rem(90px);
+    background-color: rgba(227, 80, 40,0.4);
+    display: block;
+    border-radius: rem(6px);
+    padding: rem(22px) rem(14px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.burger-content__icon {
+    max-width: 100%;
+    width: rem(46px);
+    height: rem(44px);
+} 
+.burger-content__text {
+    display: inline;
+    color: #ffffff;
+    font-family: Gagalin;
+    font-size: rem(14px);
+    font-weight: 400;
+}
