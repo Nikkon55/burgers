@@ -1,11 +1,31 @@
 .headline {
     color: #2f3234;
     font-family: Gagalin;
-    font-size: 72px;
+    font-size: rem(72px);
     font-weight: 400;
 }
 
 .headline--about-us {
     text-align: center;
-    margin-bottom: 55px;
+    margin-bottom: rem(55px);
+    @include phones {
+        margin-bottom: rem(40px);
+        font-size: rem(50px);
+        padding-top: rem(10px);
+    }
+}
+.headline--menu {
+    color: #fff;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+.headline--order {
+    color: #f9b43b;
+    text-align: center;
+    margin-bottom: rem(44px);
+    @include phones {
+        font-size: rem(40px);
+    }
+    
 }

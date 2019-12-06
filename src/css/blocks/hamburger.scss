@@ -1,0 +1,29 @@
+.hamburger {
+    display: none;
+    align-self: center;
+    background: #fff;
+	width: rem(24px);
+	height: rem(5px);
+    border-radius: rem(3px);
+    position: relative;
+    @include tablets {
+        display: flex;
+        margin-left: rem(20px);
+    }
+	&:before, &:after {
+		background: #fff;
+		width: rem(24px);
+		height: rem(5px);
+        border-radius: rem(3px);
+        content: "";
+		display: block;
+		position: absolute;
+	}
+	&:before {
+		top: rem(10px);
+	}
+
+	&:after {
+		bottom: rem(10px);
+	}
+}

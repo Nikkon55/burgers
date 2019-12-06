@@ -1,0 +1,28 @@
+.vk-icon, .fb-icon, .twitter-icon, .inst-icon {
+    width: rem(20px);
+    height: rem(20px);
+}
+.social__list {
+    display: flex;
+    flex-direction: row;
+}
+.social__item {
+    margin-right: rem(20px);
+    position: relative;
+    &:last-child {
+        margin-right: 0px;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        opacity: 0.4;
+    }
+    &:hover:after {
+        opacity: 0;
+    }
+}

@@ -1,6 +1,19 @@
 * {
     box-sizing: border-box;
 }
+body {
+    font-family: Ubuntu;
+}
+html {
+    font-size: 16px;
+    
+    @include tablets {
+        font-size: 15px;
+    }
+    @include tablets {
+        font-size: 14px;
+    }
+}
 img {
     max-width: 100%;
     max-height: 100%;
@@ -32,7 +45,8 @@ table {
 }
 
 .container {
-    width: 960px;
+    width: 95%;
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -45,6 +59,9 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include phones {
+        min-height: initial;
+    }
 }
 button {
     border: none;

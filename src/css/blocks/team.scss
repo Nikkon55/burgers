@@ -1,0 +1,128 @@
+.team {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/team/team.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.team__wrapper {
+    position: absolute;
+    right: 0;
+    background-image: url(../img/team/overlay.png);
+    height: 100%;
+    width: 50%;
+    @include tablets {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+.team__content {
+    position: absolute;
+   width: 70%;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+    
+}
+.team-accordion {
+    
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+.team-accordion__item {
+    margin-bottom: rem(20px);
+}
+.team__headline {
+    color: #f9b43b;
+    margin-bottom: rem(46px);
+    @include tablets {
+        text-align: center;
+    }
+}
+.team-accordion__details {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: 0;
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    
+}
+
+.team-accordion__photo {
+    height: rem(100px);
+    width: rem(100px);
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: rem(20px);
+    @include tablets {
+        margin-right: 0;
+
+    }
+}
+.team-accordion__desc {
+    color: #ffffff;
+    font-family: Ubuntu;
+    font-size: rem(14px);
+    font-weight: 300;
+    line-height: 2em;
+    @include tablets {
+        text-align: center;
+    }
+}
+.team-accordion__link {
+    display: flex;
+    color: #ffffff;
+    font-family: Gagalin;
+    font-size: rem(14px);
+    font-weight: 400;
+    margin-bottom: rem(14px);
+    @include tablets {
+        justify-content: center;
+        font-size: rem(25px);
+    }
+    
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border: rem(8px) solid transparent;
+        border-top-color: #f9b43b;
+        border-bottom: 0;
+        margin-right: rem(15px);
+    }
+    &--active {
+        color: #f9b43b
+    }
+
+}
+.team-accordian__text{
+    @include tablets {
+        padding: 0 15%;
+    }
+}
+
+.team-accordion__item--active .team-accordion__details {
+    height: 100%;
+}
+
+.team-accordion__item--active .team-accordion__link {
+    color: #f9b43b
+}
+
+.team-accordion__item--active .team-accordion__link:before {
+    transform: rotate(180deg);
+}

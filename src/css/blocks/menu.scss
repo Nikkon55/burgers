@@ -1,0 +1,94 @@
+.menu {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/menu/menubg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.menu-accordion__item {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-accordion__list {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: flex-end;
+}
+.menu-accordion {
+    position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.menu-accordion__content {
+    height: 100%;
+    width: 0;
+    background-color: rgba(0,0,0, 0.7);
+    padding: 4% 2%;
+    width: 0;
+    display: none;
+}
+
+.menu-accordion__title{
+    font-family: Gagalin;
+    font-size: rem(40px);
+    font-weight: 400;
+    color: #ffffff;
+    white-space: nowrap;
+    transform: rotate(-180deg);
+    writing-mode: tb-rl;
+    padding-top: 30px;
+    overflow: hidden;
+}
+.menu-accordion__trigger {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: rem(80px);
+    height: 100%;
+    background-image: url(../img/menu/menu1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    @include phones {
+        width: rem(40px);
+    }
+}
+.menu-accordion__trigger--bg--veg{
+    background-image: url(../img/menu/menu2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.menu-accordion__trigger--bg--diet {
+    background-image: url(../img/menu/menu3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.menu-accordion__text {
+    color: #ffffff;
+    font-family: Ubuntu;
+    font-size: rem(14px);
+    font-weight: 300;
+    line-height: 1.5rem;
+    overflow: hidden;
+    display: none;
+}
+
+.menu-accordion__item--active .menu-accordion__content {
+    display: flex;
+    width: rem(550px);
+    @include phones {
+        width: rem(240px); 
+    }
+
+}
+.menu-accordion__item--active .menu-accordion__text {
+    display: block;
+}
+
+.menu-accordion__item--active .menu-accordion__title {
+    color: #f9b43b;
+}

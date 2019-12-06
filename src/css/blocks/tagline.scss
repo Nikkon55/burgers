@@ -2,11 +2,22 @@
     display: flex;
     color: #ffffff;
     font-family: Lifehack;
-    font-size: 65px;
+    font-size: rem(65px);
     font-weight: 500;
-    
+    @include tablets {
+        text-align: center;
+    }
+    @include phones {
+        font-size: rem(45px);
+    }
 }
 .tagline__headline {
     color: #f9b43b;
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
+    @include tablets {
+        text-align: center;
+    }
+    @include phones {
+        font-size: rem(63px);
+    }
 }
