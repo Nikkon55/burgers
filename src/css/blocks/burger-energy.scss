@@ -6,6 +6,11 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    @include tablets{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 }
 .burger-energy__icon {
     max-width: 100%;
