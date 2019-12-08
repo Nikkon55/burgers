@@ -20,6 +20,9 @@
     display: flex;
     align-items: center;
     margin-right: 15px;
+    @include tablets {
+        margin-right: 0;
+    }
     &:after {
         content:"";
         display: block;

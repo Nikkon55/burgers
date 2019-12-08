@@ -436,14 +436,24 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media screen and (max-width: 768px) {
+    .header__container {
+      padding-right: 3.125rem; } }
 
 .hamburger-menu__btn {
   position: fixed;
-  top: 2.9375rem;
-  right: 1.875rem;
+  top: 2.8125rem;
+  right: 0.1875rem;
   z-index: 30;
   width: 3.125rem;
-  width: 3.125rem; }
+  width: 3.125rem;
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .hamburger-menu__btn {
+      display: block; } }
+  @media screen and (max-width: 480px) {
+    .hamburger-menu__btn {
+      top: 2.5rem; } }
 
 .hamburger-menu__lines {
   background: #fff;
@@ -488,7 +498,10 @@ button {
   left: -100%; }
 
 .hamburger-menu--active .hamburger-menu__nav {
-  left: 0; }
+  left: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
 
 .hamburger-menu__nav .nav__list {
   -webkit-box-orient: vertical;
@@ -498,7 +511,13 @@ button {
   font-size: 1.5rem;
   font-weight: 400;
   margin-right: 0;
-  padding: 15% 0; }
+  padding: 18% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .hamburger-menu__nav .nav__item {
   position: relative;
@@ -514,36 +533,8 @@ button {
     width: 0.5rem;
     border-radius: 50%;
     background-color: #fff;
-    margin-top: 1.25rem; }
-
-.hamburger {
-  display: none;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
-  background: #fff;
-  width: 1.5rem;
-  height: 0.3125rem;
-  border-radius: 0.1875rem;
-  position: relative; }
-  @media screen and (max-width: 768px) {
-    .hamburger {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      margin-left: 1.25rem; } }
-  .hamburger:before, .hamburger:after {
-    background: #fff;
-    width: 1.5rem;
-    height: 0.3125rem;
-    border-radius: 0.1875rem;
-    content: "";
-    display: block;
-    position: absolute; }
-  .hamburger:before {
-    top: 0.625rem; }
-  .hamburger:after {
-    bottom: 0.625rem; }
+    margin-top: 1.25rem;
+    margin-left: 0; }
 
 .nav {
   display: -webkit-box;
@@ -580,6 +571,9 @@ button {
   -ms-flex-align: center;
   align-items: center;
   margin-right: 15px; }
+  @media screen and (max-width: 768px) {
+    .nav__item {
+      margin-right: 0; } }
   .nav__item:after {
     content: "";
     display: block;
@@ -1584,7 +1578,8 @@ button {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  position: relative; }
 
 .burger-content__icon {
   max-width: 100%;
@@ -1597,6 +1592,69 @@ button {
   font-family: Gagalin;
   font-size: 0.875rem;
   font-weight: 400; }
+
+.burger-content__ingredients {
+  background-color: #ffffff;
+  opacity: 0.9;
+  padding: 1.25rem 1.25rem;
+  border-radius: 0.375rem;
+  position: absolute;
+  left: -9999px;
+  top: 0; }
+
+.burger-content--active .burger-content__ingredients {
+  left: 100%; }
+
+.burger-content__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.burger-content__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.burger-contentn__ing-icon {
+  width: 3rem;
+  height: 2.0625rem; }
+
+.burger-content__item {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.625rem; }
+
+.burger-contentn__ing-icon {
+  margin-right: 1.5625rem; }
+  @media screen and (max-width: 768px) {
+    .burger-contentn__ing-icon {
+      margin-right: 1.25rem; } }
+
+.burger-contentn__name {
+  margin-right: 3.125rem;
+  color: #2f3234;
+  font-size: 0.875rem;
+  font-weight: 500; }
+  @media screen and (max-width: 768px) {
+    .burger-contentn__name {
+      margin-right: 1.875rem; } }
+
+.burger-content__weight {
+  color: #2f3234;
+  font-size: 0.875rem;
+  font-weight: 300; }
 
 .burger-energy {
   max-width: 5.625rem;

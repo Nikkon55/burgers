@@ -8,6 +8,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 .burger-content__icon {
     max-width: 100%;
@@ -20,4 +21,57 @@
     font-family: Gagalin;
     font-size: rem(14px);
     font-weight: 400;
+}
+
+
+.burger-content__ingredients {
+    background-color: #ffffff;
+    opacity: 0.9;
+    padding: rem(20px) rem(20px);
+    border-radius: rem(6px);
+    position: absolute;
+    left: -9999px;
+    top: 0;
+}
+.burger-content--active .burger-content__ingredients {
+    left: 100%;
+}
+ 
+.burger-content__list {
+    display: flex;
+    flex-direction: column;
+}
+.burger-content__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.burger-contentn__ing-icon {
+    width: rem(48px);
+    height: rem(33px);
+}
+
+.burger-content__item {
+    align-items: center;
+    margin-bottom: rem(10px);
+}
+.burger-contentn__ing-icon {
+    margin-right: rem(25px);
+    @include tablets {
+        margin-right: rem(20px);  
+    }
+}
+.burger-contentn__name {
+    margin-right: rem(50px);
+    color: #2f3234;
+    font-size: rem(14px);
+    font-weight: 500;
+    @include tablets {
+        margin-right: rem(30px);  
+    }
+}
+.burger-content__weight {
+    color: #2f3234;
+    font-size: rem(14px);
+    font-weight: 300;
 }
