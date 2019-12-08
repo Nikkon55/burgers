@@ -437,6 +437,85 @@ button {
   -ms-flex-align: center;
   align-items: center; }
 
+.hamburger-menu__btn {
+  position: fixed;
+  top: 2.9375rem;
+  right: 1.875rem;
+  z-index: 30;
+  width: 3.125rem;
+  width: 3.125rem; }
+
+.hamburger-menu__lines {
+  background: #fff;
+  width: 1.5rem;
+  height: 0.3125rem;
+  border-radius: 0.1875rem;
+  position: absolute; }
+  .hamburger-menu__lines:before, .hamburger-menu__lines:after {
+    background: #fff;
+    width: 1.5rem;
+    height: 0.3125rem;
+    border-radius: 0.1875rem;
+    content: "";
+    display: block;
+    position: absolute; }
+  .hamburger-menu__lines:before {
+    top: 0.625rem; }
+  .hamburger-menu__lines:after {
+    bottom: 0.625rem; }
+
+.hamburger-menu--active .hamburger-menu__lines {
+  background-color: transparent; }
+
+.hamburger-menu--active .hamburger-menu__lines:before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.hamburger-menu--active .hamburger-menu__lines:after {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+.hamburger-menu__nav {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #2f3234;
+  opacity: 0.99;
+  left: -100%; }
+
+.hamburger-menu--active .hamburger-menu__nav {
+  left: 0; }
+
+.hamburger-menu__nav .nav__list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-right: 0;
+  padding: 15% 0; }
+
+.hamburger-menu__nav .nav__item {
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.25rem; }
+  .hamburger-menu__nav .nav__item:after {
+    content: "";
+    display: block;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-top: 1.25rem; }
+
 .hamburger {
   display: none;
   -ms-flex-item-align: center;
