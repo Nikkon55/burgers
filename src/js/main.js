@@ -12,3 +12,25 @@ function toggleMenu () {
     }
 }
 btn.addEventListener('click', toggleMenu);
+
+
+// team member info details open
+// var trigger = document.querySelectorAll('.team-accordion__link');
+// var openTeam = document.querySelectorAll('.team-accordion__item');
+
+ 
+//     function toggleTeam (e) {
+//         e.preventDefault();
+//         target = event.target
+//         target.classList.toggle ('team-accordion__item--active');
+//     }
+
+// trigger.addEventListener('click', toggleTeam);
+
+var item = document.querySelectorAll('.team-accordion__item');
+for (var i = 0; i<item.length; i++){
+    item[i].addEventListener ('click', function(e){
+        e.preventDefault();
+        this.classList.toggle ('team-accordion__item--active');
+    })
+}
