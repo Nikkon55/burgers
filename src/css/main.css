@@ -495,7 +495,11 @@ button {
   width: 100%;
   background-color: #2f3234;
   opacity: 0.99;
-  left: -100%; }
+  left: -100%;
+  z-index: 2;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
 
 .hamburger-menu--active .hamburger-menu__nav {
   left: 0;
