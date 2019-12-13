@@ -34,3 +34,11 @@ for (var i = 0; i<item.length; i++){
         this.classList.toggle ('team-accordion__item--active');
     })
 }
+// below js for menu accordeon
+var menuTrigger = document.querySelectorAll ('.menu-accordion__item');
+for (var j=0; j<menuTrigger.length;j++){
+    menuTrigger[j].addEventListener ('click', function(e){
+        e.preventDefault ();
+        this.classList.toggle ('menu-accordion__item--active');
+    })
+}
