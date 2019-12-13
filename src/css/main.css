@@ -1768,6 +1768,71 @@ button {
       -ms-flex-pack: center;
       justify-content: center; } }
 
+.modal-review {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2f3234;
+  opacity: 0.92;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.modal-review__inner {
+  min-height: 12.5rem;
+  width: 31.25rem;
+  background-color: #fff;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #2f3234;
+  font-size: 0.875rem;
+  padding: 2% 2%; }
+
+.modal-review__title {
+  font-family: Gagalin;
+  margin-bottom: 1.875rem;
+  font-weight: 400; }
+
+.modal-review__lines {
+  width: 15px;
+  height: 3px;
+  background-color: #e45028;
+  opacity: 0.7;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+  .modal-review__lines:after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 3px;
+    background-color: #e45028;
+    opacity: 0.7;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+
+.modal-review__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem; }
+
 .phone-icon {
   width: 0.75rem;
   height: 0.75rem; }
