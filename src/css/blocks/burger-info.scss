@@ -1,0 +1,56 @@
+.burger-info {
+    display: flex;
+    flex-direction: column;
+
+}
+.burger-info__name {
+    color: #fff;
+    margin-bottom: rem(56px);
+    @include tablets {
+        text-align: center;
+    }
+    @include phones {
+        font-size: rem(35px);
+        margin-bottom: rem(30px);
+    }
+}
+.burger-info__desc {
+    font-family: Ubuntu;
+    font-size: rem(14px);
+    line-height: 2em;
+    font-weight: 300;
+    margin-bottom: rem(36px);
+    @include tablets {
+        text-align: center;
+    }
+    @include phones {
+        margin-bottom: rem(26px);
+    }
+}
+
+.burger-info__price {
+    color: #e35028;
+    font-family: Gagalin;
+    font-size: rem(30px);
+    font-weight: 400;
+    margin-right: rem(29px);
+    @include phones {
+        font-size: rem(24px);
+    }
+}
+.burger-info__price-number {
+    font-size: rem(70px);
+    margin-right: rem(10px);
+    @include phones {
+        font-size: rem(50px);
+    }
+}
+.burger-info__3rd-row-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items:flex-end;
+    @include tablets {
+        align-items: center;
+        justify-content: center;
+    }
+}

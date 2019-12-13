@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    
+    function filter(input, than) {
+      for (i=0;i<input.length;i++){
+      if (input.length == 0) {
+        throw new Error('массив не может быть пустым');  
+      } else if (!isFinite(input[i])) {
+        throw new Error('элемент масива должен быть числом');
+      } else if (input[i]<0 && input[i]==than) {
+        throw new Error('элемент масива должен быть положительным числом');
+      }
+      var newFiltered = input.filter (i=> i>than);
+      return newFiltered;
+      }
+      };
+
+            
+    var array=[120,30, 65];
+    try {
+    var result = filter(array, 60);
+            
+    console.log(result); 
+    console.log (array.length);        
+     
+    } catch(Error) {
+      console.log(Error.message);
+    }
+    
+  </script>
+</body>
+</html>

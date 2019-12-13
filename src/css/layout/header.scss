@@ -11,4 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include tablets {
+        padding-right: rem(50px);
+    }
 }

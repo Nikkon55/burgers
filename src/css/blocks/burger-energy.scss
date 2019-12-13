@@ -1,0 +1,36 @@
+.burger-energy {
+    max-width: rem(90px);
+    opacity: 0.6;
+    display: block;
+    padding: rem(22px) rem(14px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include tablets{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+.burger-energy__icon {
+    max-width: 100%;
+    width: rem(60px);
+    height: rem(60px);
+    position: relative;
+    &:after {
+        content: "1200";
+        position: absolute;
+        bottom: 10px;
+        color: #ffffff;
+        font-family: Gagalin;
+        font-size: rem(14px);
+        font-weight: 400;
+    }
+}
+.burger-energy__text {
+    text-align: center;
+    color: #ffffff;
+    font-family: Gagalin;
+    font-size: rem(14px);
+    font-weight: 400;
+}
