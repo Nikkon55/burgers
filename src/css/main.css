@@ -1811,6 +1811,7 @@ button {
 .modal-review__lines {
   width: 15px;
   height: 3px;
+  border-radius: 2px;
   background-color: #e45028;
   opacity: 0.7;
   position: relative;
@@ -1822,6 +1823,7 @@ button {
     content: "";
     width: 15px;
     height: 3px;
+    border-radius: 2px;
     background-color: #e45028;
     opacity: 0.7;
     -webkit-transform: rotate(90deg);

@@ -42,3 +42,26 @@ for (var j=0; j<menuTrigger.length;j++){
         this.classList.toggle ('menu-accordion__item--active');
     })
 }
+
+// below MODAL-REVIEW
+
+const moreInfo = document.querySelector('.btn--color-black');
+const modal = document.querySelector('#modal-review');
+
+moreInfo.addEventListener ('click', function(e) {
+    //e.preventDefault();
+    modal.style.diplay = 'flex';
+
+});
+
+const closeModal = document.querySelector('.modal-review__close');
+closeModal.addEventListener('click', function(e){
+    e.preventDefault();
+    modal.style.display = 'none';
+});
+
+modal.addEventListener ('click', function(e) {
+    if (e.target === modal) {
+        closeModal.click();
+    }
+});
