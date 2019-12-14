@@ -45,15 +45,16 @@ for (var j=0; j<menuTrigger.length;j++){
 
 // below MODAL-REVIEW
 
-const moreInfo = document.querySelector('.btn--color-black');
+const moreInfo = document.querySelectorAll('.btn--color-black');
 const modal = document.querySelector('#modal-review');
 
-moreInfo.addEventListener ('click', function(e) {
+for (a = 0; a<moreInfo.length; a++){
+moreInfo[a].addEventListener ('click', function(e) {
     //e.preventDefault();
-    modal.style.diplay = 'flex';
-
+    modal.style.display = 'flex';
+    console.log('click')
 });
-
+}
 const closeModal = document.querySelector('.modal-review__close');
 closeModal.addEventListener('click', function(e){
     e.preventDefault();
