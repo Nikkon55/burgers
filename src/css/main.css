@@ -385,7 +385,8 @@ table {
 .container {
   width: 95%;
   max-width: 960px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
 
 a {
   text-decoration: none; }
@@ -1501,9 +1502,25 @@ button {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#f9b43b), color-stop(48%, #eb8c38), color-stop(74%, #f9b43b), to(#f9b43b));
   background-image: -webkit-linear-gradient(bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
   background-image: -o-linear-gradient(bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
-  background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%); }
+  background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+  overflow: hidden; }
+
+.slider-menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  right: 0;
+  position: relative; }
 
 .slider-menu__content {
+  width: 100%;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1513,8 +1530,7 @@ button {
   flex-direction: row;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 0 0.625rem; }
+  justify-content: space-between; }
   @media screen and (max-width: 768px) {
     .slider-menu__content {
       -webkit-box-orient: vertical;
@@ -1551,7 +1567,24 @@ button {
   height: 100%;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  overflow: hidden; }
+
+.slider-menu__scroll-left {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: -2.5rem; }
+
+.slider-menu__scroll-right {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: -2.5rem; }
 
 .scroll-left__icon {
   min-width: 0.8125rem;

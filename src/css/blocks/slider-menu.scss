@@ -1,12 +1,20 @@
 .slider-menu{
     background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+  overflow: hidden;
+}
+.slider-menu__list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     
 }
 .slider-menu__content {
+    width: 100%;
+    flex-shrink: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 rem(10px);
+    //padding: 0 rem(10px);
     @include tablets {
         flex-direction: column;
         align-items: center;
@@ -32,6 +40,20 @@
     flex-direction: row;
     height: 100%;
     align-items: center;
+    overflow: hidden;
+}
+
+.slider-menu__scroll-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: rem(-40px);
+}
+.slider-menu__scroll-right{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: rem(-40px);
 }
 .scroll-left__icon{
     min-width: rem(13px);

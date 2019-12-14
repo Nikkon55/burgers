@@ -66,3 +66,90 @@ modal.addEventListener ('click', function(e) {
         closeModal.click();
     }
 });
+
+
+// order form 
+
+const orderForm = document.querySelector('#order-form');
+const sendBtn = document.querySelector('#sendBtn');
+
+sendBtn.addEventListener('click', function (e){
+    e.preventDefault();
+    if (validateForm(orderForm)){
+        const data = {
+            name: orderForm.elements.name.value,
+            phone: orderForm.elements.phone.value,
+            comment: orderForm.elements.comment.value,
+            to: 'nikolay.kononenko@gmail.com'
+        }
+        const xhr = new XMLHttpRequest();
+        xhr.responseType = 'json'
+        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
+        xhr.send (JSON.stringify(data));
+        xhr.addEventListener ('load', () => {
+            if (xhr.response.status < 400) {
+                const formModalFail = document.querySelector('#formFail');
+                formModalFail.style.display = 'flex';
+                
+            }
+        })
+    }
+});
+
+
+
+function validateForm(form) {
+    let valid = true;
+    if (!validateField(form.elements.name)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.phone)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.comment)) {
+        valid = false;
+    }
+    return valid;
+}
+
+function validateField(field){
+    field.nextElementSibling.textContent = field.validationMessage;
+    return field.checkValidity();
+}
+
+
+// slider-menu
+
+const slide = (function(){
+    const left = document.querySelector('.scroll-left__link');
+    const right = document.querySelector('.scroll-right__link');
+    const slider = document.querySelector('.slider-menu__list');
+    const itemCount = document.querySelectorAll('.slider-menu__content').length;
+    let pos = 0;
+
+    function setTransform() {
+        slider.style.transform = `translateX(${-pos*slider.offsetwidth}px)`;
+
+    }
+    function prev(){
+        pos == 0 ? pos = itemCount -1 : pos--;
+        setTransform();
+    }
+    function next(){
+        pos = itemCount -1 ? pos = 0 : pos++;
+        setTransform();
+    }
+
+    function addListener(){
+        left.addEventListener('click', prev);
+        right.addEventListener('click', next);
+        window.addEventListener('resize', setTransform);
+    }
+
+    return {
+        init: addListener
+    }
+    
+})();
+
+slide.init();
