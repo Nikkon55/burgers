@@ -87,10 +87,36 @@ sendBtn.addEventListener('click', function (e){
         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
         xhr.send (JSON.stringify(data));
         xhr.addEventListener ('load', () => {
-            if (xhr.response.status < 400) {
+            if (xhr.response.status === 0) {
                 const formModalFail = document.querySelector('#formFail');
                 formModalFail.style.display = 'flex';
-                
+
+                const closeModalForm = formModalFail.querySelector('.modal-review__close')
+                closeModalForm.addEventListener('click', function(e){
+                    e.preventDefault();
+                    formModalFail.style.display = 'none';
+                });
+
+                formModalFail.addEventListener ('click', function(e) {
+                    if (e.target === formModalFail) {
+                        closeModalForm.click();
+                    }
+                });
+            } else {
+                const formModalSuccess = document.querySelector('#formSuccess');
+                formModalSuccess.style.display = 'flex';
+
+                const closeModalFormSuc = formModalSuccess.querySelector('.modal-review__close')
+                closeModalFormSuccess.addEventListener('click', function(e){
+                    e.preventDefault();
+                    formModalSuccess.style.display = 'none';
+                });
+                formModalSuccess.addEventListener ('click', function(e) {
+                    if (e.target === formModalSuccess) {
+                        closeModalFormSuccess.click();
+                    }
+                });
+
             }
         })
     }
@@ -128,14 +154,18 @@ const slide = (function(){
     let pos = 0;
 
     function setTransform() {
-        slider.style.transform = `translateX(${-pos*slider.offsetwidth}px)`;
+        console.log(slider);
+        slider.style.transform = `translateX(${-pos*slider.offsetWidth}px)`;
 
     }
-    function prev(){
+    function prev(e){
+        e.preventDefault();
+        console.log('click');
         pos == 0 ? pos = itemCount -1 : pos--;
         setTransform();
     }
-    function next(){
+    function next(e){
+        e.preventDefault();
         pos = itemCount -1 ? pos = 0 : pos++;
         setTransform();
     }
@@ -144,6 +174,7 @@ const slide = (function(){
         left.addEventListener('click', prev);
         right.addEventListener('click', next);
         window.addEventListener('resize', setTransform);
+        
     }
 
     return {

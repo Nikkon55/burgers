@@ -1514,8 +1514,11 @@ button {
   -ms-flex-direction: row;
   flex-direction: row;
   width: 100%;
-  right: 0;
-  position: relative; }
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s; }
 
 .slider-menu__content {
   width: 100%;
@@ -1820,7 +1823,7 @@ button {
   align-items: center; }
 
 .modal-review__inner {
-  min-height: 12.5rem;
+  min-height: 6.25rem;
   width: 31.25rem;
   background-color: #fff;
   border-radius: 6px;
