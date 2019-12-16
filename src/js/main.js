@@ -27,14 +27,34 @@ btn.addEventListener('click', toggleMenu);
 
 // trigger.addEventListener('click', toggleTeam);
 
-var item = document.querySelectorAll('.team-accordion__item');
-for (var i = 0; i<item.length; i++){
-    item[i].addEventListener ('click', function(e){
-        e.preventDefault();
-        this.classList.toggle ('team-accordion__item--active');
-    })
-}
-// below js for menu accordeon
+// var item = document.querySelectorAll('.team-accordion__item');
+// for (var i = 0; i<item.length; i++){
+//     item[i].addEventListener ('click', function(e){
+//         e.preventDefault();
+//         this.classList.toggle ('team-accordion__item--active');
+//     })
+// }
+
+const teamlist = document.querySelector('.team-accordion');
+teamlist.addEventListener ('click', function(e){
+    e.preventDefault();
+    let target = e.target;
+    const item = target.closest ('.team-accordion__item');
+    const items = document.querySelectorAll('.team-accordion__item');
+    if (target.classList.contains('team-accordion__link')){
+        if (!item.classList.contains('team-accordion__item--active')){
+            for (let i = 0; i<item.length; i++){
+                items[i].classList.remove('team-accordion__item--active');
+            }
+            item.classList.add('team-accordion__item--active');
+        } else {
+            item.classList.remove('team-accordion__item--active');
+        }
+    }
+});
+
+
+//below js for menu accordeon
 var menuTrigger = document.querySelectorAll ('.menu-accordion__item');
 for (var j=0; j<menuTrigger.length;j++){
     menuTrigger[j].addEventListener ('click', function(e){
@@ -42,6 +62,9 @@ for (var j=0; j<menuTrigger.length;j++){
         this.classList.toggle ('menu-accordion__item--active');
     })
 }
+
+
+
 
 // below MODAL-REVIEW
 
@@ -76,18 +99,26 @@ const sendBtn = document.querySelector('#sendBtn');
 sendBtn.addEventListener('click', function (e){
     e.preventDefault();
     if (validateForm(orderForm)){
-        const data = {
-            name: orderForm.elements.name.value,
-            phone: orderForm.elements.phone.value,
-            comment: orderForm.elements.comment.value,
-            to: 'nikolay.kononenko@gmail.com'
-        }
+        // const data = {
+        //     name: orderForm.elements.name.value,
+        //     phone: orderForm.elements.phone.value,
+        //     comment: orderForm.elements.comment.value,
+        //     to: 'nikolay.kononenko@gmail.com'
+        // }
+        
+
+        let formData = new FormData();
+        formData.append ("name", orderForm.elements.name.value);
+        formData.append ("phone", orderForm.elements.phone.value);
+        formData.append ("comment", orderForm.elements.comment.value);
+        formData.append ("to", "nikolay.kononenko@gmail.com");
         const xhr = new XMLHttpRequest();
-        xhr.responseType = 'json'
-        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
-        xhr.send (JSON.stringify(data));
+        xhr.responseType = 'json';
+        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/');
+        xhr.setRequestHeader("X-Requested-With", "MLHttpRequest");
+        xhr.send (formData);
         xhr.addEventListener ('load', () => {
-            if (xhr.response.status === 0) {
+            if (xhr.response.status < 400) {
                 const formModalFail = document.querySelector('#formFail');
                 formModalFail.style.display = 'flex';
 
