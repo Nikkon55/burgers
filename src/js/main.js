@@ -39,11 +39,11 @@ const teamlist = document.querySelector('.team-accordion');
 teamlist.addEventListener ('click', function(e){
     e.preventDefault();
     let target = e.target;
-    const item = target.closest ('.team-accordion__item');
+    const item = target.closest('.team-accordion__item');
     const items = document.querySelectorAll('.team-accordion__item');
     if (target.classList.contains('team-accordion__link')){
         if (!item.classList.contains('team-accordion__item--active')){
-            for (let i = 0; i<item.length; i++){
+            for (let i = 0; i<items.length; i++){
                 items[i].classList.remove('team-accordion__item--active');
             }
             item.classList.add('team-accordion__item--active');
@@ -54,16 +54,33 @@ teamlist.addEventListener ('click', function(e){
 });
 
 
-//below js for menu accordeon
-var menuTrigger = document.querySelectorAll ('.menu-accordion__item');
-for (var j=0; j<menuTrigger.length;j++){
-    menuTrigger[j].addEventListener ('click', function(e){
-        e.preventDefault ();
-        this.classList.toggle ('menu-accordion__item--active');
-    })
-}
+/*below js for menu accordeon*/
+// var menuTrigger = document.querySelectorAll ('.menu-accordion__item');
+// for (var j=0; j<menuTrigger.length;j++){
+//     menuTrigger[j].addEventListener ('click', function(e){
+//         e.preventDefault ();
+//         this.classList.toggle ('menu-accordion__item--active');
+//     })
+// }
 
+const menuList = document.querySelector('.menu-accordion__list');
 
+menuList.addEventListener ('click', function(e){
+    e.preventDefault();
+    let trigger = e.target;
+    const mItem = trigger.closest('.menu-accordion__item');
+    const mItems = document.querySelectorAll('.menu-accordion__item');
+    if (trigger.classList.contains('menu-accordion__trigger')||trigger.classList.contains('menu-accordion__title')) {
+        if (!mItem.classList.contains('menu-accordion__item--active')){
+            for (let m = 0; m<mItems.length; m++){
+                mItems[m].classList.remove('menu-accordion__item--active');
+            }
+            mItem.classList.add('menu-accordion__item--active');
+        } else {
+            mItem.classList.remove('menu-accordion__item--active');
+        }
+    }
+});
 
 
 // below MODAL-REVIEW

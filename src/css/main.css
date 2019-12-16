@@ -1047,7 +1047,9 @@ button {
   object-fit: cover;
   border-radius: 50%;
   overflow: hidden;
-  margin-right: 1.25rem; }
+  margin-right: 1.25rem;
+  -ms-flex-negative: 0;
+  flex-shrink: 0; }
   @media screen and (max-width: 768px) {
     .team-accordion__photo {
       margin-right: 0; } }
@@ -1211,7 +1213,7 @@ button {
   width: 34.375rem; }
   @media screen and (max-width: 480px) {
     .menu-accordion__item--active .menu-accordion__content {
-      width: 15rem; } }
+      width: 100%; } }
 
 .menu-accordion__item--active .menu-accordion__text {
   display: block; }
@@ -1557,13 +1559,13 @@ button {
       position: relative; } }
   @media screen and (max-width: 480px) {
     .slider-menu__left {
-      width: 100%; } }
+      width: 90%; } }
 
 .slider-menu__right {
   width: 50%; }
   @media screen and (max-width: 480px) {
     .slider-menu__right {
-      width: 95%; } }
+      width: 90%; } }
 
 .slider-menu__wrapper {
   display: -webkit-box;
@@ -1586,6 +1588,9 @@ button {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   left: -2.5rem; }
+  @media screen and (max-width: 480px) {
+    .slider-menu__scroll-left {
+      left: -0.3125rem; } }
 
 .slider-menu__scroll-right {
   position: absolute;
@@ -1594,6 +1599,9 @@ button {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   right: -2.5rem; }
+  @media screen and (max-width: 480px) {
+    .slider-menu__scroll-right {
+      right: -0.3125rem; } }
 
 .scroll-left__icon {
   min-width: 0.8125rem;
@@ -1842,6 +1850,11 @@ button {
   color: #2f3234;
   font-size: 0.875rem;
   padding: 2% 2%; }
+  @media screen and (max-width: 480px) {
+    .modal-review__inner {
+      min-height: 6.25rem;
+      width: 12.5rem;
+      padding: 8% 8%; } }
 
 .modal-review__title {
   font-family: Gagalin;

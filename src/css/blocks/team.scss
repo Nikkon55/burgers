@@ -69,6 +69,7 @@
     border-radius: 50%;
     overflow: hidden;
     margin-right: rem(20px);
+    flex-shrink: 0;
     @include tablets {
         margin-right: 0;
 

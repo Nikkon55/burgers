@@ -26,6 +26,11 @@
     color: #2f3234;
     font-size: rem(14px);
     padding: 2% 2%;
+    @include phones {
+        min-height: rem(100px);
+        width: rem(200px);
+        padding: 8% 8%;
+    }
 }
 .modal-review__title {
     font-family: Gagalin;
