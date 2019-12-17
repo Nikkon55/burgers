@@ -1214,6 +1214,9 @@ button {
   @media screen and (max-width: 480px) {
     .menu-accordion__item--active .menu-accordion__content {
       width: 100%; } }
+  @media screen and (max-width: 768px) {
+    .menu-accordion__item--active .menu-accordion__content {
+      width: 100%; } }
 
 .menu-accordion__item--active .menu-accordion__text {
   display: block; }
@@ -1591,6 +1594,9 @@ button {
   @media screen and (max-width: 480px) {
     .slider-menu__scroll-left {
       left: -0.3125rem; } }
+  @media screen and (max-width: 768px) {
+    .slider-menu__scroll-left {
+      left: -0.3125rem; } }
 
 .slider-menu__scroll-right {
   position: absolute;
@@ -1600,6 +1606,9 @@ button {
   transform: translateY(-50%);
   right: -2.5rem; }
   @media screen and (max-width: 480px) {
+    .slider-menu__scroll-right {
+      right: -0.3125rem; } }
+  @media screen and (max-width: 768px) {
     .slider-menu__scroll-right {
       right: -0.3125rem; } }
 

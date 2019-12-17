@@ -14,6 +14,20 @@ function toggleMenu () {
 btn.addEventListener('click', toggleMenu);
 
 
+const hamburgerMenu = document.querySelector('.hamburger-menu__nav');
+const navItem = hamburgerMenu.querySelectorAll('.nav__item');
+    for (n=0; n<navItem.length; n++) {
+        navItem[n].addEventListener('click', function(e){
+            if(overlay.classList.contains('hamburger-menu--active')){
+                overlay.classList.remove('hamburger-menu--active');
+            }
+        });
+    }   
+
+
+
+
+
 // team member info details open
 // var trigger = document.querySelectorAll('.team-accordion__link');
 // var openTeam = document.querySelectorAll('.team-accordion__item');
@@ -214,7 +228,7 @@ const slide = (function(){
     }
     function next(e){
         e.preventDefault();
-        pos = itemCount -1 ? pos = 0 : pos++;
+        pos == itemCount -1 ? pos = 0 : pos++;
         setTransform();
     }
 

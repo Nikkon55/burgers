@@ -21,7 +21,8 @@
     position: absolute;
 	right: 0;
 	top: 0;
-	bottom: 0;
+    bottom: 0;
+    
 }
 .menu-accordion__content {
     height: 100%;
@@ -82,6 +83,9 @@
     display: flex;
     width: rem(550px);
     @include phones {
+        width: 100%; 
+    }
+    @include tablets {
         width: 100%; 
     }
 

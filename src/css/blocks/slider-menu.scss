@@ -52,6 +52,9 @@
     @include phones {
         left: rem(-5px);
     }
+    @include tablets {
+        left: rem(-5px);
+    }
 }
 .slider-menu__scroll-right{
     position: absolute;
@@ -59,6 +62,9 @@
     transform: translateY(-50%);
     right: rem(-40px);
     @include phones {
+        right: rem(-5px);
+    }
+    @include tablets {
         right: rem(-5px);
     }
 }
