@@ -20,6 +20,7 @@ const navItem = hamburgerMenu.querySelectorAll('.nav__item');
         navItem[n].addEventListener('click', function(e){
             if(overlay.classList.contains('hamburger-menu--active')){
                 overlay.classList.remove('hamburger-menu--active');
+                body.style.overflow = 'visible';
             }
         });
     }   
