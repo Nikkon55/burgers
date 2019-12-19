@@ -247,3 +247,72 @@ const slide = (function(){
 })();
 
 slide.init();
+
+
+// maps
+
+ymaps.ready(mapsInit);
+
+const placemarks = [
+    {
+        latitude: 59.94,
+        longitude: 30.32,
+        hintContent: 'Наш первый ресторан',
+        balloonContent: 'Наш первый ресторан'
+    },
+
+    {
+        latitude: 59.92269150188717,
+        longitude: 30.17650998956655,
+        hintContent: 'Наш первый морской ресторан',
+        balloonContent: 'Наш первый морской ресторан'
+    },
+
+    {
+        latitude: 59.92638227212006,
+        longitude: 30.29625390191777,
+        hintContent: 'Наш второй ресторан',
+        balloonContent: 'Наш второй ресторан'
+    },
+
+    {
+        latitude: 59.931982666558795,
+        longitude: 30.353417140443163,
+        hintContent: 'И еще один',
+        balloonContent: 'И еще один'
+    }
+
+
+]
+
+geoObjects=[];
+function mapsInit (){
+    let map = new ymaps.Map ('map',{
+        center: [59.94, 30.32],
+        zoom: 13,
+        controls: ['zoomControl'],
+        behaviors:['drag']
+
+    });
+
+    for (p=0; p<placemarks.length;p++) {
+            geoObjects[p] = new ymaps.Placemark([placemarks[p].latitude,placemarks[p].longitude], {
+            hintContent: placemarks[p].hintContent,
+            balloonContent: placemarks[p].balloonContent
+        },
+        {
+            iconLayout:'default#image',
+            iconImageHref: './src/img/map-marker.png',
+            iconImageSize: [46,57],
+            iconImageOffset: [-23, -57]
+    
+        })
+        const clusterer = new ymaps.Clusterer({
+            clusterIconColor: '#e35028'
+        });
+        map.geoObjects.add (clusterer);
+        clusterer.add(geoObjects);
+        
+    };
+    
+}
