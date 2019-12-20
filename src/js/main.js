@@ -316,3 +316,57 @@ function mapsInit (){
     };
     
 }
+
+
+// burger-content
+
+// const ingr = document.querySelector('.burger-content');
+// const ingrList = document.querySelector('.burger-content__ingredients')
+
+// ingr.addEventListener('mouseenter', function(e){
+// ingr.classList.add ('burger-content--active')
+
+// if (ingr.classList.contains('burger-content--active')){
+//     ingrList.style.display = 'flex';
+// }
+// });
+
+// ingr.addEventListener('mouseleave', function(e){
+//     ingr.classList.remove ('burger-content--active')
+    
+//     if (ingr.classList.contains('burger-content--active')){
+//         ingrList.style.display = 'flex';
+//     }
+//     });
+
+// ingr.addEventListener('click', function(e){
+//         e.preventDefault();
+// });
+
+const ingr = document.querySelectorAll('.burger-content');
+const ingrList = document.querySelectorAll('.burger-content__ingredients')
+for (m=0;m<ingr.length;m++){
+    let ingrAll = ingr[m];
+    ingrAll.addEventListener('mouseenter', function(e){
+    
+        ingrAll.classList.add ('burger-content--active')
+    for (l=0;l<ingrList.length;l++){
+        let ingrListAll = ingrList[l];
+    if (ingrAll.classList.contains('burger-content--active')){
+        ingrListAll.style.display = 'flex';
+}
+    }
+});
+
+ingrAll.addEventListener('mouseleave', function(e){
+    ingrAll.classList.remove ('burger-content--active')
+    
+    if (ingrAll.classList.contains('burger-content--active')){
+        ingrList.style.display = 'flex';
+    }
+    });
+
+    ingrAll.addEventListener('click', function(e){
+        e.preventDefault();
+});
+}
