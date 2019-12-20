@@ -342,7 +342,7 @@ function mapsInit (){
 // ingr.addEventListener('click', function(e){
 //         e.preventDefault();
 // });
-
+///////////////////////////////////////////////////////////////////////
 const ingr = document.querySelectorAll('.burger-content');
 const ingrList = document.querySelectorAll('.burger-content__ingredients')
 for (m=0;m<ingr.length;m++){
@@ -357,16 +357,19 @@ for (m=0;m<ingr.length;m++){
 }
     }
 });
+}
 
+for (q=0;q<ingr.length;q++){
+    let ingrAll = ingr[q];
 ingrAll.addEventListener('mouseleave', function(e){
     ingrAll.classList.remove ('burger-content--active')
     
-    if (ingrAll.classList.contains('burger-content--active')){
-        ingrList.style.display = 'flex';
-    }
-    });
+    for (l=0;l<ingrList.length;l++){
+        let ingrListAll = ingrList[l];
+    if (ingrAll.classList.contains('burger-content')){
+        ingrListAll.style.display = 'none';
 
-    ingrAll.addEventListener('click', function(e){
-        e.preventDefault();
-});
+    }
+}
+})
 }
