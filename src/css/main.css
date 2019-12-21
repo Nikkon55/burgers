@@ -701,6 +701,12 @@ button {
     .headline--order {
       font-size: 2.5rem; } }
 
+.headline--video {
+  margin-bottom: 3.125rem; }
+  @media screen and (max-width: 480px) {
+    .headline--video {
+      font-size: 2.5rem; } }
+
 .tagline__text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1901,6 +1907,104 @@ button {
   position: absolute;
   top: 1.25rem;
   right: 1.25rem; }
+
+.video {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/bg/video-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.video__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.video__player {
+  width: 100%;
+  overflow: hidden; }
+
+#player {
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+.video__play-btn-big {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer; }
+
+.video__toolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  background-color: #3e3e3e;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.375rem 1.25rem; }
+
+.duration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 2.8125rem; }
+
+.sound {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.duration__length {
+  width: 100%;
+  height: 0.25rem;
+  border-radius: 0.0625rem;
+  background-color: #626262;
+  -webkit-appearance: none;
+  outline: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+.duration__length::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #626262;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  cursor: pointer; }
+
+.duration__play-btn-sml {
+  margin-right: 1.1875rem; }
+
+.sound__icon {
+  margin-right: 1.1875rem; }
 
 .phone-icon {
   width: 0.75rem;
