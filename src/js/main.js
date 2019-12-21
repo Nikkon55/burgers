@@ -343,6 +343,8 @@ function mapsInit (){
 //         e.preventDefault();
 // });
 ///////////////////////////////////////////////////////////////////////
+
+// далее величайший костыль, но работает
 const ingr = document.querySelectorAll('.burger-content');
 const ingrList = document.querySelectorAll('.burger-content__ingredients')
 for (m=0;m<ingr.length;m++){
@@ -374,4 +376,92 @@ ingrAll.addEventListener('mouseleave', function(e){
 })
 }
 
-////////// 
+////////// video section
+
+let video;
+let durationControl;
+let soundControl;
+let intervalId;
+const MAX_SOUND_VALUE = 10;
+
+
+document.addEventListener ('DOMContentLoaded', function() {
+
+    video = document.getElementById('player');
+
+    video.addEventListener('click', playStop);
+
+    let playButtons = document.querySelectorAll('.play');
+    for (x=0;x<playButtons.length;x++){
+        playButtons[x].addEventListener('click', playStop);
+    }
+
+    let muteBtn = document.getElementById('soundIcon');
+    muteBtn.addEventListener('click', mute);
+
+    durationControl = document.getElementById('durationLevel');
+    durationControl.addEventListener('mousedown', stopInterval);
+    durationControl.addEventListener('mouseup', setVideoDuration);
+    durationControl.min = 0;
+    durationControl.value = 0;
+
+    soundControl = document.getElementById('soundLevel');
+    soundControl.addEventListener('mouseup', changeSoundVolume);
+
+    soundControl.min = 0;
+    soundControl.max = MAX_SOUND_VALUE;
+
+    video.addEventListener('ended', function(){
+        document.querySelector('.video__play-btn-big').classList.toggle('video__play-btn-big--hidden');
+        video.currentTime = 0;
+    },false);
+
+});
+
+function playStop(){
+    document.querySelector('.video__play-btn-big').classList.toggle('video__play-btn-big--hidden');
+
+    durationControl.max = video.duration;
+
+    if (video.paused){
+        video.play();
+        intervalId = setInterval(updateDuration, 1000/66);
+    } else {
+        video.pause();
+        clearInterval(intervalId);
+    }
+}
+
+function updateDuration(){
+    durationControl.value = video.currentTime;
+}
+
+function stopInterval(){
+    video.pause();
+    clearInterval(intervalId);
+}
+
+function setVideoDuration(){
+    video.currentTime = durationControl.value;
+    intervalId = setInterval(updateDuration, 1000/66);
+    if(video.pause){
+        video.play();
+        document.getElementsByClassName('video__play-btn-big')[0].classList.add('video__play-btn-big--hidden');
+    }
+}
+
+function mute(){
+    if (video.volume===0){
+        videoVolume = soundLevel;
+        soundControl.value = soundLevel*MAX_SOUND_VALUE;
+    } else {
+        soundLevel = video.volume;
+        video.volume = 0;
+        soundControl.value = 0;
+    }
+}
+
+function changeSoundVolume(){
+    video.volume = soundControl.value/MAX_SOUND_VALUE;
+
+}

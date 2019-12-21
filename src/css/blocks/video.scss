@@ -12,6 +12,7 @@
 }
 .video__player {
     width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 #player {
@@ -23,11 +24,17 @@
 }
 .video__play-btn-big {
     position: absolute;
+    display: block;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     cursor: pointer;
 }
+.video__play-btn-big--hidden {
+    position: absolute;
+    display: none;
+}
+
 .video__toolbar {
     display: flex;
     flex-direction: row;
