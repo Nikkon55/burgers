@@ -488,7 +488,13 @@ document.addEventListener ('DOMContentLoaded', function() {
     const fixedDot = fixedList.querySelectorAll('a');
     for (d=0;d<fixedDot.length; d++){
     const fixedSpan = fixedDot[d].querySelector('span');
+    
     fixedSpan.style.background='#fff';
+    console.log (fixedSpan)
+
+    for (z=0;z<fixedSpan.length; z++){
+        fixedSpan.nextElementSibling.style.background = '#fff'
+    }
     fixedDot[d].classList.add('fixed-menu__dot')
         // if (fixedDot[d].classList.contains('active')){
         //     fixedDot[d].classList.toggle('fixed-menu__dot--active');
