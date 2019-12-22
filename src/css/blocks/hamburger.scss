@@ -59,11 +59,13 @@
 	background-color: #2f3234;
 	opacity: 0.99;
 	left: -100%;
+	z-index: 10;
 }
 
 .hamburger-menu--active .hamburger-menu__nav {
 	left: 0;
 	transition: 0.3s;
+	top: 0;
 	
 }
 

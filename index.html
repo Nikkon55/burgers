@@ -12,39 +12,40 @@
 
 <body>
 
-    <div class="hamburger-menu">
-        <a href="#" class="hamburger-menu__btn">
-            <span class="hamburger-menu__lines"></span>
-        </a>
-        <nav class="hamburger-menu__nav">
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="#about-us" class="nav__link">О нас</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#slider-menu" class="nav__link">Бургеры</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#team" class="nav__link">Команда</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#menu" class="nav__link">Меню</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#reviews" class="nav__link">Отзывы</a>
-                </li>
-                <li class="nav__item">
-                    <a href="" class="nav__link">Как мы работаем</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#map" class="nav__link">Контакты</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+   
 
     <div class="wrapper" id="fullPage">
         <section class="section intro" id="intro">
+            <div class="hamburger-menu">
+                <a href="#" class="hamburger-menu__btn">
+                    <span class="hamburger-menu__lines"></span>
+                </a>
+                <nav class="hamburger-menu__nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">О нас</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#burg" class="nav__link">Бургеры</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#tm" class="nav__link">Команда</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#mn" class="nav__link">Меню</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#rev" class="nav__link">Отзывы</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#vid" class="nav__link">Как мы работаем</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#mp" class="nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
             <header class="header">
                 <div class="container header__container">
                     <img src="./src/img/logo.png" alt="лого" class="logo">
@@ -93,37 +94,9 @@
                     </div>
                 </div>
             </div>
-            <ul class="fixed-menu">
-                <li class="fixed-menu__item">
-                    <a href="" class="fixed-menu__dot fixed-menu__dot--active" aria-label="о нас"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="" class="fixed-menu__dot" aria-label="Бургеры"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="" class="fixed-menu__dot" aria-label="Команда"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="" class="fixed-menu__dot" aria-label="Меню"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="" class="fixed-menu__dot" aria-label="Отзывы"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="" class="fixed-menu__dot" aria-label="как мы работаем"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="" class="fixed-menu__dot" aria-label="Контакты"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="" class="fixed-menu__dot" aria-label="Заказать"></a>
-                </li>
-                <li class="fixed-menu__item">
-                    <a href="" class="fixed-menu__dot" aria-label="Заказать"></a>
-                </li>
-            </ul>
+            
             <div class="scroll">
-                <a href="#" class="scroll__icon" aria-label="прокрутка страницы вниз"></a>
+                <a href="#about" class="scroll__icon" aria-label="прокрутка страницы вниз"></a>
             </div>
         </section>
         
@@ -255,7 +228,7 @@
                                         <div class="burger-info__price"><span class="burger-info__price-number">500</span>рублей
                                         </div>
                                         <div class="btn btn--header">
-                                            <a href="" class="btn__link">Заказать</a>
+                                            <a href="#od" class="btn__link">Заказать</a>
                                         </div>
                                     </div>
                                 </div>
@@ -316,7 +289,7 @@
                                         </ul>
                                     </div>
                                 </a>
-                                <img src="./src/img/burger-black.png" alt="фото черного бургера" class="slider-menu__img-black">
+                                <img src="./src/img/burger-chicken.png" alt="фото черного бургера" class="slider-menu__img-black">
                                 <div class="burger-energy">
                                     <svg class="burger-energy__icon">
                                         <use xlink:href="./src/img/svg/sprite.svg#kkal"></use>
@@ -786,6 +759,35 @@
         
         </section>
     </div>
+    <ul class="fixed-menu">
+        <li class="fixed-menu__item">
+            <a href="#int" class="fixed-menu__dot fixed-menu__dot--active" aria-label="о нас"></a>
+        </li>
+        <li class="fixed-menu__item">
+            <a href="#about" class="fixed-menu__dot" aria-label="Бургеры"></a>
+        </li>
+        <li class="fixed-menu__item">
+            <a href="#burg" class="fixed-menu__dot" aria-label="Команда"></a>
+        </li>
+        <li class="fixed-menu__item">
+            <a href="#rev" class="fixed-menu__dot" aria-label="Меню"></a>
+        </li>
+        <li class="fixed-menu__item">
+            <a href="#vid" class="fixed-menu__dot" aria-label="Отзывы"></a>
+        </li>
+        <li class="fixed-menu__item">
+            <a href="#tm" class="fixed-menu__dot" aria-label="как мы работаем"></a>
+        </li>
+        <li class="fixed-menu__item">
+            <a href="#mn" class="fixed-menu__dot" aria-label="Контакты"></a>
+        </li>
+        <li class="fixed-menu__item">
+            <a href="#od" class="fixed-menu__dot" aria-label="Заказать"></a>
+        </li>
+        <li class="fixed-menu__item">
+            <a href="#mp" class="fixed-menu__dot" aria-label="Заказать"></a>
+        </li>
+    </ul>
     <div class="modal-review" id="modal-review">
         <div class="modal-review__inner">
             <div class="modal-review__title">Антон</div>
