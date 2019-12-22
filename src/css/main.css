@@ -980,6 +980,7 @@ button {
 .team__wrapper {
   position: absolute;
   right: 0;
+  top: 0;
   background-image: url(../img/team/overlay.png);
   height: 100%;
   width: 50%; }

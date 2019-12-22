@@ -465,3 +465,11 @@ function changeSoundVolume(){
     video.volume = soundControl.value/MAX_SOUND_VALUE;
 
 }
+
+/// OPS OPS plugin
+
+new fullpage('#fullPage',{
+    autoScrolling: true,
+    anchors:['int', 'about','burg','rev','vid','tm','mn','od','mp']
+})
+
