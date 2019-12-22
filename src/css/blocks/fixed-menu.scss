@@ -15,8 +15,8 @@
 }
 .fixed-menu__dot {
     display: block;
-    height: rem(16px);
-    width: rem(16px);
+    height: rem(16px) !important;
+    width: rem(16px) !important;
     border-radius: 50%;
     border: 1px solid transparent;
     margin-bottom: rem(3px);

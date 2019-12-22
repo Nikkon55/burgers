@@ -470,6 +470,30 @@ function changeSoundVolume(){
 
 new fullpage('#fullPage',{
     autoScrolling: true,
-    anchors:['int', 'about','burg','rev','vid','tm','mn','od','mp']
+    anchors:['int', 'about','burg','rev','vid','tm','mn','od','mp'],
+    navigation:true
 })
 
+
+document.addEventListener ('DOMContentLoaded', function() {
+    const fixedMenu = document.querySelector('#fp-nav')
+    const fixedList = fixedMenu.querySelector('ul');
+
+    fixedList.classList.add('fixed-menu');
+
+    const fixedItem = fixedList.querySelectorAll('li');
+    for (f=0; f<fixedItem.length; f++){
+    fixedItem[f].classList.add('fixed-menu__item');
+    }
+    const fixedDot = fixedList.querySelectorAll('a');
+    for (d=0;d<fixedDot.length; d++){
+    const fixedSpan = fixedDot[d].querySelector('span');
+    fixedSpan.style.background='#fff';
+    fixedDot[d].classList.add('fixed-menu__dot')
+        // if (fixedDot[d].classList.contains('active')){
+        //     fixedDot[d].classList.toggle('fixed-menu__dot--active');
+        // } 
+
+    }
+
+})
