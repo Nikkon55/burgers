@@ -217,13 +217,13 @@ const slide = (function(){
     let pos = 0;
 
     function setTransform() {
-        console.log(slider);
+        
         slider.style.transform = `translateX(${-pos*slider.offsetWidth}px)`;
 
     }
     function prev(e){
         e.preventDefault();
-        console.log('click');
+        
         pos == 0 ? pos = itemCount -1 : pos--;
         setTransform();
     }
@@ -362,19 +362,33 @@ for (m=0;m<ingr.length;m++){
 }
 
 for (q=0;q<ingr.length;q++){
-    let ingrAll = ingr[q];
+    const ingrAll = ingr[q];
 ingrAll.addEventListener('mouseleave', function(e){
     ingrAll.classList.remove ('burger-content--active')
+    
     
     for (l=0;l<ingrList.length;l++){
         let ingrListAll = ingrList[l];
     if (ingrAll.classList.contains('burger-content')){
         ingrListAll.style.display = 'none';
-        
+        ingrAll.classList.remove ('burger-content--active');
 
     }
 }
-})
+});
+}
+
+const ingrClose = document.querySelectorAll('.burger-content__close');
+for (i=0;i<ingrClose.length;i++){
+    let ingrCloseAll = ingrClose[i];
+    ingrCloseAll.addEventListener('click', function(e){
+        e.preventDefault();
+        const ingrd = document.querySelectorAll ('.burger-content')
+        for (i=0;i<ingrd.length;i++){
+            ingrd[i].classList.remove('burger-content--active');
+        }
+        
+    });
 }
 
 ////////// video section
