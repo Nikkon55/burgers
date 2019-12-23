@@ -472,7 +472,8 @@ function changeSoundVolume(){
 new fullpage('#fullPage',{
     autoScrolling: true,
     anchors:['int', 'about','burg','rev','vid','tm','mn','od','mp'],
-    navigation:true
+    navigation:true,
+    verticalCentered: false
 })
 
 

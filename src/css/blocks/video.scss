@@ -52,6 +52,9 @@
 .sound {
     display: flex;
     align-items: center;
+    @include tablets {
+        display: none;
+    }
     
 }
 .duration__length {
