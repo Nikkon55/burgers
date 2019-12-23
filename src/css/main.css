@@ -755,8 +755,8 @@ button {
 
 .fixed-menu {
   position: fixed;
-  top: 100px;
-  right: 60px;
+  top: 100px !important;
+  right: 60px !important;
   z-index: 2; }
   @media screen and (max-width: 768px) {
     .fixed-menu {
@@ -1731,6 +1731,33 @@ button {
   color: #2f3234;
   font-size: 0.875rem;
   font-weight: 300; }
+
+.burger-content__lines {
+  width: 15px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #e45028;
+  opacity: 0.7;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+  .burger-content__lines:after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #e45028;
+    opacity: 0.7;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+
+.burger-content__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem; }
 
 .burger-energy {
   max-width: 5.625rem;

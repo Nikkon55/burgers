@@ -289,7 +289,7 @@ geoObjects=[];
 function mapsInit (){
     let map = new ymaps.Map ('map',{
         center: [59.94, 30.32],
-        zoom: 13,
+        zoom: 11,
         controls: ['zoomControl'],
         behaviors:['drag']
 
@@ -356,7 +356,7 @@ for (m=0;m<ingr.length;m++){
         let ingrListAll = ingrList[l];
     if (ingrAll.classList.contains('burger-content--active')){
         ingrListAll.style.display = 'flex';
-}
+        }
     }
 });
 }
@@ -370,6 +370,7 @@ ingrAll.addEventListener('mouseleave', function(e){
         let ingrListAll = ingrList[l];
     if (ingrAll.classList.contains('burger-content')){
         ingrListAll.style.display = 'none';
+        
 
     }
 }
@@ -477,6 +478,7 @@ new fullpage('#fullPage',{
 
 document.addEventListener ('DOMContentLoaded', function() {
     const fixedMenu = document.querySelector('#fp-nav')
+    fixedMenu.classList.add('fixed-menu');
     const fixedList = fixedMenu.querySelector('ul');
 
     fixedList.classList.add('fixed-menu');
@@ -488,13 +490,16 @@ document.addEventListener ('DOMContentLoaded', function() {
     const fixedDot = fixedList.querySelectorAll('a');
     for (d=0;d<fixedDot.length; d++){
     const fixedSpan = fixedDot[d].querySelector('span');
-    
+    fixedDot[d].lastElementChild.style.background ='#fff'
+    fixedDot[d].lastElementChild.style.boxShadow = '2px 2px 2px grey';
     fixedSpan.style.background='#fff';
-    console.log (fixedSpan)
+    
+    
 
     for (z=0;z<fixedSpan.length; z++){
-        fixedSpan.nextElementSibling.style.background = '#fff'
+        
     }
+    
     fixedDot[d].classList.add('fixed-menu__dot')
         // if (fixedDot[d].classList.contains('active')){
         //     fixedDot[d].classList.toggle('fixed-menu__dot--active');

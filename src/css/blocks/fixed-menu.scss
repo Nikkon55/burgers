@@ -1,7 +1,7 @@
 .fixed-menu {
     position: fixed;
-    top: 100px;
-    right: 60px;
+    top: 100px !important;
+    right: 60px !important;
     z-index: 2;
     @include tablets {
         display: none;

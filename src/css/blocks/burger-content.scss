@@ -76,3 +76,30 @@
     font-size: rem(14px);
     font-weight: 300;
 }
+
+
+.burger-content__lines {
+    width: 15px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #e45028;
+    opacity: 0.7;
+    position: relative;
+    transform: rotate(45deg);
+    &:after {
+        position: absolute;
+        content: "";
+        width: 15px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #e45028;
+        opacity: 0.7;
+        transform: rotate(90deg);
+        
+    }
+}
+.burger-content__close {
+    position: absolute;
+    top: rem(20px);
+    right: rem(20px);
+}
