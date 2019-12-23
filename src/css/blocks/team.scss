@@ -55,7 +55,7 @@
     overflow: hidden;
     max-height: 0;
    
-    transition: height 0.5s ease-out;
+    transition: max-height 0.5s ease-out;
     @include tablets {
         flex-direction: column;
         align-items: center;
@@ -121,8 +121,8 @@
 }
 
 .team-accordion__item--active .team-accordion__details {
-    max-height: 100%;
-    transition: height 0.5s ease-out;
+    max-height: 100vh;
+    transition: max-height 0.5s ease-out;
 }
 
 .team-accordion__item--active .team-accordion__link {

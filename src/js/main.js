@@ -107,7 +107,7 @@ for (a = 0; a<moreInfo.length; a++){
 moreInfo[a].addEventListener ('click', function(e) {
     //e.preventDefault();
     modal.style.display = 'flex';
-    console.log('click')
+    
 });
 }
 const closeModal = document.querySelector('.modal-review__close');
@@ -131,12 +131,7 @@ const sendBtn = document.querySelector('#sendBtn');
 sendBtn.addEventListener('click', function (e){
     e.preventDefault();
     if (validateForm(orderForm)){
-        // const data = {
-        //     name: orderForm.elements.name.value,
-        //     phone: orderForm.elements.phone.value,
-        //     comment: orderForm.elements.comment.value,
-        //     to: 'nikolay.kononenko@gmail.com'
-        // }
+        
         
 
         let formData = new FormData();
@@ -319,30 +314,6 @@ function mapsInit (){
 
 
 // burger-content
-
-// const ingr = document.querySelector('.burger-content');
-// const ingrList = document.querySelector('.burger-content__ingredients')
-
-// ingr.addEventListener('mouseenter', function(e){
-// ingr.classList.add ('burger-content--active')
-
-// if (ingr.classList.contains('burger-content--active')){
-//     ingrList.style.display = 'flex';
-// }
-// });
-
-// ingr.addEventListener('mouseleave', function(e){
-//     ingr.classList.remove ('burger-content--active')
-    
-//     if (ingr.classList.contains('burger-content--active')){
-//         ingrList.style.display = 'flex';
-//     }
-//     });
-
-// ingr.addEventListener('click', function(e){
-//         e.preventDefault();
-// });
-///////////////////////////////////////////////////////////////////////
 
 // далее величайший костыль, но работает
 const ingr = document.querySelectorAll('.burger-content');

@@ -1058,9 +1058,9 @@ button {
   flex-direction: row;
   overflow: hidden;
   max-height: 0;
-  -webkit-transition: height 0.5s ease-out;
-  -o-transition: height 0.5s ease-out;
-  transition: height 0.5s ease-out; }
+  -webkit-transition: max-height 0.5s ease-out;
+  -o-transition: max-height 0.5s ease-out;
+  transition: max-height 0.5s ease-out; }
   @media screen and (max-width: 768px) {
     .team-accordion__details {
       -webkit-box-orient: vertical;
@@ -1126,10 +1126,10 @@ button {
     padding: 0 15%; } }
 
 .team-accordion__item--active .team-accordion__details {
-  max-height: 100%;
-  -webkit-transition: height 0.5s ease-out;
-  -o-transition: height 0.5s ease-out;
-  transition: height 0.5s ease-out; }
+  max-height: 100vh;
+  -webkit-transition: max-height 0.5s ease-out;
+  -o-transition: max-height 0.5s ease-out;
+  transition: max-height 0.5s ease-out; }
 
 .team-accordion__item--active .team-accordion__link {
   color: #f9b43b; }
