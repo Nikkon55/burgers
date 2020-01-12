@@ -69,14 +69,7 @@ teamlist.addEventListener ('click', function(e){
 });
 
 
-/*below js for menu accordeon*/
-// var menuTrigger = document.querySelectorAll ('.menu-accordion__item');
-// for (var j=0; j<menuTrigger.length;j++){
-//     menuTrigger[j].addEventListener ('click', function(e){
-//         e.preventDefault ();
-//         this.classList.toggle ('menu-accordion__item--active');
-//     })
-// }
+
 
 const menuList = document.querySelector('.menu-accordion__list');
 
@@ -356,7 +349,7 @@ for (i=0;i<ingrClose.length;i++){
         e.preventDefault();
         const ingrd = document.querySelectorAll ('.burger-content')
         for (i=0;i<ingrd.length;i++){
-            ingrd[i].classList.remove('burger-content--active');
+            ingrd[i].classList.toggle('burger-content--active');
         }
         
     });

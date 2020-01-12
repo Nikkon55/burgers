@@ -1,0 +1,25 @@
+{
+  "name": "burgers",
+  "version": "1.0.0",
+  "description": "* Николай Кононенко\r * Максим Иванов\r * ВЕБ ДЛЯ НАЧИНАЮЩИХ",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-cli": "^2.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nikkon55/burgers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nikkon55/burgers/issues"
+  },
+  "homepage": "https://github.com/Nikkon55/burgers#readme"
+}
